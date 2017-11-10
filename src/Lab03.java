@@ -1,47 +1,41 @@
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Lab03 {
 
-
     public static void main(String[] args) {
 
-        int n;
+        double array[] = new double[]{1, 2, 2, 3, 4};
 
-        double array[] = new double[]{3.4, 2.5, 3.4, 1.8, 4.3};
+        Map<Double, Integer> dupen = new HashMap<>();
 
-        Map<Double,Integer> dupen = new HashMap<Double,Integer>();
-
-        for (int i = 0; i< array.length;i++){
+        for (int i = 0; i < array.length; i++) {
             dupen.put(array[i], i);
         }
 
         double result[] = new double[5];
 
-        for (Map.Entry<Double,Integer> entry : dupen.entrySet()){
-
-
-            if (entry.getKey() > 1){
-                for (int j =0; j < entry.getKey(); j++){
+        for (Map.Entry<Double, Integer> entry : dupen.entrySet()) {
+            if (entry.getKey() > 1) {
+                for (int j = 0; j < entry.getKey(); j++) {
                     result[entry.getValue()] = entry.getKey();
-
                 }
             }
         }
 
-
-        for (Map.Entry<Double,Integer> entry : dupen.entrySet()){
-            if (entry.getKey() == 1){
-                    result[entry.getValue()] = entry.getKey();
-
+        for (Map.Entry<Double, Integer> entry : dupen.entrySet()) {
+            if (entry.getKey() == 1) {
+                result[entry.getValue()] = entry.getKey();
             }
         }
-        //Arrays.asList(result);
 
-                                 System.out.println(Arrays.asList(result).toString());
-                                 System.out.println(array.toString());
+        printArray(array, result);
+    }
+
+    private static void printArray(double[] array, double[] result) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(result[i] + " ");
+        }
     }
 
 }
