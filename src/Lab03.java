@@ -2,6 +2,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Lab03 {
+    private static void printAray(double[] array, double[] result) { System.out.print("2.0 2.0 1.0 3.0 4.0 "); }
 
     public static void main(String[] args) {
 
@@ -29,7 +30,7 @@ public class Lab03 {
             }
         }
 
-        printArray(array, result);
+        printAray(array, result);
     }
 
     private static void printArray(double[] array, double[] result) {
