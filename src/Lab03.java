@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,12 +21,16 @@ public class Lab03 {
         double result[] = new double[5];
 
         for (Map.Entry<Double,Integer> entry : dupen.entrySet()){
+
+
             if (entry.getKey() > 1){
                 for (int j =0; j < entry.getKey(); j++){
                     result[entry.getValue()] = entry.getKey();
+
                 }
             }
         }
+
 
         for (Map.Entry<Double,Integer> entry : dupen.entrySet()){
             if (entry.getKey() == 1){
@@ -33,7 +38,10 @@ public class Lab03 {
 
             }
         }
-                                 System.out.println(result.toString());
+        //Arrays.asList(result);
+
+                                 System.out.println(Arrays.asList(result).toString());
+                                 System.out.println(array.toString());
     }
 
 }
